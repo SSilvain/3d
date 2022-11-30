@@ -1,0 +1,92 @@
+.package {
+	&__container {
+		@media (min-width:$mobile) {
+			display: grid;
+			grid-template-columns: repeat(2, 50%);
+			grid-template-rows: auto 1fr;
+		}
+	}
+	
+	&__title {
+		padding-right: rem(80);
+		@media (min-width:$mobile){
+			padding-right: 0;
+		}
+	}
+
+	&__slider-box {
+		@media (min-width:$mobile) {
+			grid-row: span 2;
+		}
+		position: relative;
+	}
+
+	&__slider {
+		overflow: visible !important;
+		width: 60%;
+		// height: 500px;
+		clip-path: inset(0 -100% 0 0);
+
+		.swiper-slide {
+			opacity: 0;
+			transition: .9s ease;
+			transition-property: transform, opacity;
+		}
+
+		.swiper-slide-active {
+			opacity: 1;
+		}
+
+		.swiper-slide-next {
+			opacity: .3;
+			transform: scale(0.8)
+		}
+
+		.swiper-slide-prev {
+			// opacity: 1;
+			// transition: .9s ease;
+		}
+	}
+
+	&__wrapper {
+		// width: 40px;
+	}
+
+	&__slide {
+		// width: 148px;
+	}
+
+	&__img {
+		width: 100%;
+	}
+}
+
+.swiper-package-nav {
+	position: absolute;
+	right: rem(0);
+	top: rem(-30);
+	// background: #999;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: rem(14);
+
+	@media (min-width:$mobile) {
+		top: auto;
+		right: 50%;
+		transform: translateX(50%);
+		bottom: rem(-30);
+
+	}
+}
+
+.swiper-package-button-prev {
+	transform: scale(-1, 1);
+	cursor: pointer;
+	padding: rem(4);
+}
+
+.swiper-package-button-next {
+	cursor: pointer;
+	padding: rem(4);
+}

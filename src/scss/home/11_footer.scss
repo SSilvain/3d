@@ -1,0 +1,85 @@
+.footer {
+	padding: rem(20) 0;
+	background: $mainColor;
+	color: #fff;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto 1fr;
+
+		@media (min-width:$mobile) {
+			grid-template-columns: auto 1fr auto;
+			align-items: center;
+		}
+	}
+
+	&__logo {
+		grid-column: span 2;
+		display: flex;
+		align-items: center;
+		color: #fff;
+		margin-bottom: rem(20);
+		
+		@media (min-width:$mobile) {
+			margin-bottom: rem(0);
+			grid-column: span 1;
+		}
+
+		span {
+			font-size: rem(18);
+			margin-right: rem(7);
+			text-transform: uppercase;
+			font-weight: 500;
+			color: #fff;
+		}
+	}
+
+	&__logo-ico {
+		fill: #fff;
+		width: 30px;
+		height: 30px;
+	}
+
+	.footer__menu {
+		grid-column: 2 /3;
+		grid-row: 2/3;
+		@media (min-width:$mobile){
+			grid-column: 2/3;
+			grid-row: 1/2;
+			display: flex;
+			justify-content: end;
+		}
+	}
+
+	.footer__item {
+		text-align: right;
+		font-weight: 300;
+		font-size: 11px;
+		line-height: 110%;
+		margin-bottom: rem(20);
+		/* or 12px */
+		
+		letter-spacing: 0.05em;
+		@media (min-width:$mobile){
+			margin-bottom: rem(0);
+			margin-right: rem(30); 
+		}
+	}
+	
+	.footer__link {
+		text-transform: uppercase;
+		
+	}
+
+	.footer__copy {
+		grid-column: 1/ 2;
+		grid-row: 2/3;
+		// margin-top: rem(32);
+		@media (min-width:$mobile){
+			// margin-top: rem(0);
+			grid-column: 3/4;
+			 grid-row: 1/2; 
+		}
+	}
+}

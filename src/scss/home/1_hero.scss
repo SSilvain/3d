@@ -1,0 +1,72 @@
+.hero {
+	&__container {
+		background: url("@img/hero-img-pc.png") no-repeat;
+		background-size: contain;
+		background-position-x: -40px;
+		padding-top: rem(240);
+		margin-bottom: rem(128);
+	}
+
+	&__title {
+		font-size: rem(36);
+		letter-spacing: 0.04em;
+		text-align: right;
+		margin-bottom: rem(40);
+		width: rem(280);
+		margin-left: auto;
+
+		@media (min-width:$mobile) {
+			width: rem(560);
+			font-size: rem(80);
+		}
+
+		b {
+			letter-spacing: 0.08em;
+		}
+
+		i {
+			letter-spacing: 0.06em;
+		}
+
+		span {
+			letter-spacing: 0.04em;
+		}
+	}
+
+	&__list {
+		font-style: normal;
+		font-weight: 300;
+		font-size: rem(14);
+		line-height: 1;
+
+		@media (min-width:$mobile) {
+			font-size: rem(18);
+			text-align: right;
+		}
+	}
+
+	&__item {
+		position: relative;
+		padding-left: rem(18);
+		margin-bottom: rem(10);
+
+		@media (min-width:$mobile) {
+			padding-left: rem(0);
+			padding-right: rem(18);
+
+		}
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: rem(12);
+
+			@media (min-width:$mobile) {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+}

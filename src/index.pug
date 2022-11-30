@@ -1,0 +1,21 @@
+extends pug/tpl
+
+block vars
+	- var title = "HOME"
+
+
+block content
+	main.page
+		include pug/content/home/1_hero
+		include pug/content/home/2_we
+		include pug/content/home/3_work
+		include pug/content/home/4_product
+		include pug/content/home/5_package
+		include pug/content/home/6_video
+		include pug/content/home/7_prices
+		include pug/content/home/8_pro-3d
+		include pug/content/home/9_priority
+		include pug/content/home/10_contact
+
+block footer
+	include pug/content/home/11_footer
