@@ -1,35 +1,53 @@
 .hero {
+	margin-bottom: 7.7rem;
 	&__container {
-		background: url("@img/hero-img-pc.png") no-repeat;
-		background-size: contain;
-		background-position-x: -40px;
-		padding-top: rem(240);
-		margin-bottom: rem(128);
+		background: url("../img/hero-img-pc.png") no-repeat;
+		background-size: 274px;
+		background-position-x: -33px;
+		background-position-y: 18px;
+		padding-top: 13rem;
+		@media (min-width:320px){
+			background-size: 80%; 
+			  
+		}
+		@media (min-width:$mobileSmall){
+			background-size: 70%; 
+			  
+		}
+		@media (min-width:$mobile){
+			background-size: 50%; 
+			  
+		}
 	}
 
 	&__title {
-		font-size: rem(36);
+		// font-size: rem(36);
+		@include adaptiveValue("font-size", 80, 30);
 		letter-spacing: 0.04em;
 		text-align: right;
-		margin-bottom: rem(40);
+		margin-bottom: 2.1rem;
 		width: rem(280);
 		margin-left: auto;
 
+		@media (min-width:$mobileSmall) {
+			width: rem(460);
+			// font-size: rem(80);
+		}
 		@media (min-width:$mobile) {
 			width: rem(560);
-			font-size: rem(80);
+			// font-size: rem(80);
 		}
 
 		b {
-			letter-spacing: 0.08em;
+			letter-spacing: 0.05em;
 		}
 
 		i {
-			letter-spacing: 0.06em;
+			letter-spacing: 0.05em;
 		}
 
 		span {
-			letter-spacing: 0.04em;
+			letter-spacing: 0.02em;
 		}
 	}
 
@@ -38,8 +56,9 @@
 		font-weight: 300;
 		font-size: rem(14);
 		line-height: 1;
+		margin-bottom: 3.175rem;
 
-		@media (min-width:$mobile) {
+		@media (min-width:320px) {
 			font-size: rem(18);
 			text-align: right;
 		}
@@ -47,10 +66,10 @@
 
 	&__item {
 		position: relative;
-		padding-left: rem(18);
-		margin-bottom: rem(10);
+		padding-left: 1.325rem;
+		margin-bottom: 1.225rem;
 
-		@media (min-width:$mobile) {
+		@media (min-width:320px) {
 			padding-left: rem(0);
 			padding-right: rem(18);
 
@@ -63,7 +82,7 @@
 			transform: translateY(-50%);
 			font-size: rem(12);
 
-			@media (min-width:$mobile) {
+			@media (min-width:320px) {
 				left: auto;
 				right: 0;
 			}

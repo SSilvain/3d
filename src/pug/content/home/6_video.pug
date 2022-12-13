@@ -1,11 +1,22 @@
+block vars
+	- var id = "7rAs9ZPC86Q"
 .video
 	.video__container
-		.video__title.title 3D PRODUCT <i>ANIMATION</i>
+		.video__title.title 3d product <i>animation</i>
 		.video__source
+			.video-frame
+				a.video-frame__link(href="https://youtu.be/"+id)
+					picture
+						source(srcset="https://i.ytimg.com/vi_webp/"+id+"/maxresdefault.webp", type="image/webp")
+						img.video-frame__media(src="https://i.ytimg.com/vi/"+id+"/maxresdefault.jpg", alt="1. Пилот, разборы, ответы и лайвы")
+				button.video-frame__button(aria-label="Запустить видео")
+					svg(width="68", height="48", viewBox="0 0 68 48")
+						path.video-frame__button-shape(d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z")
+						path.video-frame__button-icon(d="M 45,24 27,14 27,34")
 		.video__content
 			.video__paragraph.paragraph 3D product animation creates new possibilities for showing your product. For example, you can give an interesting insight into the inner workings of very complex machines or technical systems.
 
 			.video__paragraph.paragraph Alone or accompanied by music, 3D animation always attracts attention.
 
-			.video__button.button.button--left <span>prices</span>
+			button.video__button.button.button--left <span>prices</span>
 			.video__paragraph.paragraph--strong-italic Step by step we will help you from the script creation to the finished video.

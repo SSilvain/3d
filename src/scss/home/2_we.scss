@@ -1,4 +1,6 @@
 .we {
+	
+	margin-bottom: 6.7rem;
 	&__container {
 		@media (min-width:$mobile) {
 			display: grid;
@@ -9,6 +11,8 @@
 	}
 
 	&__vertical {
+		position: relative;
+		left: -7px;
 		text-align: right;
 		font-weight: 600;
 		font-size: 36px;
@@ -18,12 +22,13 @@
 		transform: rotate(180deg);
 
 		text-transform: uppercase;
-		padding-left: rem(15);
+		padding-left: 0.4375rem;
+		letter-spacing: 0px;
 	}
 
 	&__content {
 		display: flex;
-		margin-bottom: rem(50);
+		margin-bottom: 3.525rem;
 
 		@media (min-width:$mobile) {
 			width: rem(600);
@@ -43,6 +48,7 @@
 	}
 
 	&__img {
+		margin-bottom: 5.8rem;
 		@media (min-width:$mobile) {
 			grid-row: span 2;
 		}
@@ -66,18 +72,18 @@
 
 	&__item {
 		position: relative;
-		margin-bottom: rem(10);
-		padding-left: rem(40);
+		margin-bottom: 1.525rem;
+		padding-left: 4.1rem;
 
 		&::before {
 			content: "";
 			display: block;
 			position: absolute;
-			top: 50%;
+			top: 9.8px;
 			left: 0;
-			transform: translateY(-50%);
+			// transform: translateY(-50%);
 			height: rem(2);
-			width: rem(30);
+			width: 2.375rem;
 			background: #303030;
 			background: linear-gradient(90deg, rgba(#303030, .3) 0%, rgba(#303030, 0) 100%);
 		}
@@ -86,9 +92,9 @@
 			content: "";
 			display: block;
 			position: absolute;
-			top: 50%;
+			top: 8.5px;
 			left: 0;
-			transform: translateY(-50%);
+			// transform: translateY(-50%);
 			height: rem(5);
 			width: rem(5);
 			border-radius: 50%;

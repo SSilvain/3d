@@ -35,6 +35,7 @@
 		"gulp-notify": "latest",
 		"gulp-plumber": "latest",
 		"gulp-prettier": "latest",
+		"gulp-pxtorem": "^3.0.0",
 		"gulp-rename": "latest",
 		"gulp-svg-sprite": "latest",
 		"gulp-ttf2woff": "latest",
@@ -72,6 +73,8 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"postcss": "^8.4.20",
+		"postcss-pxtorem": "^6.0.0",
 		"simplebar": "latest"
 	}
 }

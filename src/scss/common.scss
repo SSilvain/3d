@@ -11,6 +11,7 @@
 	line-height: 110%;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
+	margin-bottom: 40px;
 	i{
 		font-style: italic;
 		font-weight: 300;
@@ -21,9 +22,8 @@
 	position: relative;
 	left: calc(50% - 10px);
 	transform: translateX(-50%);
-	min-width: rem(160);
-	margin-top: rem(20);
-	margin-bottom: rem(20);
+	min-width: 13.8rem;
+	max-width: calc(100% - 10px);
 	display: inline-block;
 	border: 1px solid rgba(#303030, .5);
 	cursor: pointer;
@@ -40,6 +40,7 @@
 		padding: rem(20);
 		background: $mainColor;
 		color: #fff;
+		font-size: 0.825rem;
 
 		&::after {
 			content: "\e900";
@@ -52,7 +53,7 @@
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 			font-size: rem(9);
-			margin-left: 10px;
+			margin-left: 8px;
 		}
 	}
 }
@@ -76,8 +77,8 @@
 	justify-content: center;
 	min-width: rem(120);
 	min-height: rem(50);
-	margin-top: rem(20);
-	margin-bottom: rem(20);
+	/* margin-top: 1.25rem; */
+	/* margin-bottom: 1.25rem; */
 	cursor: pointer;
 	padding: rem(13) rem(15);
 
@@ -98,6 +99,7 @@
 .button--left {
 	left: 0;
 	transform: translateX(0);
+	min-width: 149px;
 }
 .button--right {
 	left: calc(100% - 10px);

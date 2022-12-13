@@ -1,5 +1,5 @@
 .priority {
-
+	margin-bottom: 74px;
 	&__container {
 		@media (min-width:$mobile) {
 			display: grid;
@@ -9,11 +9,12 @@
 	}
 
 	&__title-wrapper {
+		margin-bottom: 100px;
 		
 	}
 
 	&__title {
-		margin-bottom: rem(20);
+		margin-bottom: 3.25rem;
 	}
 
 	&__subtitle {
@@ -25,6 +26,7 @@
 	}
 
 	&__image-wrapper {
+		margin-bottom: 11px;
 		@media (min-width:$mobile) {
 			grid-row: span 2;
 		}
@@ -51,7 +53,7 @@
 
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
-		margin-bottom: rem(20);
+		margin-bottom: 1.85rem;
 	}
 
 	&__phone {

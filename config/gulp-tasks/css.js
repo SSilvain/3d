@@ -1,4 +1,5 @@
 import cleanCss from 'gulp-clean-css';
+import pxtorem from 'gulp-pxtorem';
 import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
@@ -10,6 +11,16 @@ export const css = () => {
 				title: "CSS",
 				message: "Error: <%= error.message %>"
 			})))
+		.pipe(pxtorem({
+			rootValue: 16,
+			unitPrecision: 5,
+			propList: ['*'],
+			selectorBlackList: [],
+			replace: true,
+			mediaQuery: false,
+			minPixelValue: 0,
+			exclude: /node_modules/i
+		}))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,

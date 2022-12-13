@@ -1,10 +1,12 @@
 .work {
+	margin-bottom: 7.2rem;
 	&__container {
 	}
 	
 	&__title {}
 	&__slider-box{
 		position: relative;
+		margin-bottom: 2.3rem;
 	}
 	&__slider {
 
@@ -12,6 +14,8 @@
 	
 	&__title {
 		padding-right: rem(80);
+		margin-bottom: 2.1rem;
+		letter-spacing: 0.9px;
 		@media (min-width:$mobile){
 			padding-right: 0;
 		}
@@ -39,11 +43,11 @@
 .swiper-work-nav{
 	position: absolute;
 	right: rem(0);
-	top: rem(-30);
+	top: -3.375rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	font-size: rem(14);
+	font-size: 0.775rem;
 	@media (min-width:$mobile){
 		 top: auto;
 		 right: 50%;

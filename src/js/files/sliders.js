@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectCreative } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -111,17 +111,30 @@ function initSliders() {
 		new Swiper('.swiper-product', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, EffectCreative],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			autoHeight: true,
 			speed: 800,
-			pagination: {
-			  el: ".swiper-pagination",
-			  type: "fraction",
+			effect: "creative",
+			creativeEffect: {
+				perspective: true,
+				prev: {
+					// will set `translateZ(-400px)` on previous slides
+					translate: ['-100%', 0, -400],
+				},
+				next: {
+					// will set `translateX(100%)` on next slides
+					translate: ['80%', 0, -400],
+					scale: .6,
+					opacity: .5,
+				},
+				limitProgress: 2,
+				// perspective: true,
 			},
+			// slidesPerGroup: 1,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -161,27 +174,30 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
+
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					pagination: {
+						el: ".swiper-pagination",
+						type: "fraction",
+					},
 				},
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+					pagination: {
+						el: ".swiper-pagination",
+						type: "fraction",
+					},
 				},
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					pagination: {
+						el: ".swiper-pagination",
+						type: "fraction",
+					},
 				},
 			},
-			*/
+
 			// События
 			on: {
 
@@ -194,17 +210,30 @@ function initSliders() {
 		new Swiper('.swiper-package', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, EffectCreative],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			autoHeight: true,
 			speed: 800,
-			pagination: {
-			  el: ".swiper-package-pagination",
-			  type: "fraction",
+			effect: "creative",
+			creativeEffect: {
+				perspective: true,
+				prev: {
+					// will set `translateZ(-400px)` on previous slides
+					translate: ['-100%', 0, -400],
+				},
+				next: {
+					// will set `translateX(100%)` on next slides
+					translate: ['80%', 0, -400],
+					scale: .6,
+					opacity: .5,
+				},
+				limitProgress: 2,
+				// perspective: true,
 			},
+			// slidesPerGroup: 1,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -244,27 +273,30 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
+
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					pagination: {
+						el: ".swiper-package-pagination",
+						type: "fraction",
+					},
 				},
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+					pagination: {
+						el: ".swiper-package-pagination",
+						type: "fraction",
+					},
 				},
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					pagination: {
+						el: ".swiper-package-pagination",
+						type: "fraction",
+					},
 				},
 			},
-			*/
+
 			// События
 			on: {
 

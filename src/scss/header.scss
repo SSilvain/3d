@@ -13,8 +13,8 @@
 		// padding-bottom: rem(15);
 		// margin-top: rem(25);
 		// @include adaptiveValue("margin-top", 25, 15);
-		margin-top: rem(15);
-		margin-bottom: rem(10);
+		margin-top: 1.0375rem;
+		margin-bottom: 10px;
 	}
 
 	// .header__logo
@@ -24,23 +24,29 @@
 		align-items: center;
 		
 		span {
-			font-size: rem(18);
-			margin-right: rem(7);
+			position: relative;
+			top: 1px;
+			font-size: 0.8375rem;
+			margin-right: 0.275rem;
 			text-transform: uppercase;
 			font-weight: 500;
 			color: rgba(48, 48, 48, 1);
+			letter-spacing: 0.4px;
+			// display: flex;
+			// line-height: 0;
 		}
 	}
 	
 	// .header__logo-img
 	
 	&__logo-ico {
+		/* display: block; */
 		// z-index: 688;
-		// display: flex;
+		/* display: flex; */
 		// background: #fff;
-		fill: rgba(48, 48, 48, 1);
-		width: 30px;
-		height: 30px;
+		fill: rgb(48, 48, 48);
+		width: 24px;
+		height: 18px;
 		// transition: all .3s ease;
 		.menu-open &{
 			// fill: #fff;
@@ -84,12 +90,14 @@
 }
 
 .menu {
+	// line-height: 1.1;
+	display: block;
 	// position: relative;
 
 	// .menu__icon
 
 	&__icon {
-		margin-top: rem(6);
+		// margin-top: rem(6);
 	}
 
 	// .menu__body
@@ -101,7 +109,7 @@
 		top: 0;
 		transition: left .3s ease 0s;
 		background: #303030;
-		background-image: url("@img/background-tiny.png");
+		background-image: url("../img/background-tiny.png");
 		width: 100%;
 		height: 100vh;
 		font-size: rem(18);
@@ -109,6 +117,7 @@
 		padding-left: rem(15);
 		padding-right: rem(15);
 		overflow: auto;
+		z-index: 1;
 
 		@media (min-width:$mobile) {
 			position: relative;
@@ -132,7 +141,7 @@
 			width: 100%;
 			transition: left .3s ease 0s;
 			background: #303030;
-			background-image: url("@img/background-tiny.png");
+			background-image: url("../img/background-tiny.png");
 			// z-index: 2444;
 
 			.menu-open & {
@@ -148,16 +157,22 @@
 	//.menu__logo
 	&__logo{
 		position: fixed;
-		top: rem(15);
+		top: 1.0375rem;
 		left: rem(15);
 		display: flex;
 		align-items: center;
 		
 		span {
-			margin-right: rem(7);
+			
+			position: relative;
+			top: 1px;
+			font-size: 0.8375rem;
+			margin-right: 0.275rem;
 			text-transform: uppercase;
 			font-weight: 500;
-			font-size: rem(18);
+			letter-spacing: 0.4px;
+			
+	
 			color: #fff;
 			
 		}
@@ -168,13 +183,14 @@
 	
 	&__logo-ico {
 		fill: #fff;
-		width: 30px;
-		height: 30px;
+		width: 24px;
+		height: 18px;
 	}
 
 	// .menu__list
 
 	&__list {
+		line-height: 1.1;
 		@media (min-width:$mobile) {
 
 			display: flex;
@@ -211,10 +227,11 @@
 //Burger
 
 .icon-menu {
+	margin-top: 0.2125rem;
 	display: block;
 	position: relative;
-	width: rem(30);
-	height: rem(18);
+	width: rem(25);
+	height: 0.725rem;
 	z-index: 5;
 
 	@media (any-hover: none) {
@@ -242,7 +259,8 @@
 	}
 
 	span {
-		top: calc(50% - rem(1));
+		top: 50%;
+		transform: translateY(-50%);
 		width: 80%;
 	}
 
